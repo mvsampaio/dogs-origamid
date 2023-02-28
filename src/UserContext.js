@@ -35,7 +35,6 @@ export const UserStorage = ({ children }) => {
     try {
       setError(null);
       setLoading(true);
-
       const { url, options } = TOKEN_POST({ username, password });
       const tokenRes = await fetch(url, options);
 
@@ -70,6 +69,8 @@ export const UserStorage = ({ children }) => {
         } finally {
           setLoading(false);
         }
+      } else {
+        setLogin(false);
       }
     }
     autoLogin();
