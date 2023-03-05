@@ -6,7 +6,7 @@ const Loading = () => {
   const color = '#333';
   const displayStep = (i) => (step === i ? 'block' : 'none');
 
-  React.useState(() => {
+  React.useEffect(() => {
     function updateStep() {
       setStep((step) => {
         if (step < 3) return step + 1;
