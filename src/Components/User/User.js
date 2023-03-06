@@ -6,12 +6,17 @@ import UserPhotoPost from './UserPhotoPost';
 import UserStats from './UserStats';
 import { UserContext } from '../../UserContext';
 import NotFound from '../NotFound';
+import Head from '../Helper/Head';
 
 const User = () => {
   const { data } = React.useContext(UserContext);
 
   return (
     <section className="container">
+      <Head
+        title="Minha conta"
+        description="Página com as fotos da conta logada."
+      />
       <UserHeader />
       <Routes>
         <Route path="/" element={<Feed user={data.id} />} />
