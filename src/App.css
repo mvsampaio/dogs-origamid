@@ -84,3 +84,14 @@ a {
     transform: initial;
   }
 }
+
+.App {
+  display: flex;
+  flex-direction: column;
+  /* Calculando a altura mínima levando em consideração o footer. */
+  min-height: calc(100vh + 10rem);
+}
+
+.AppBody {
+  flex: 1;
+}
