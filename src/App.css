@@ -95,3 +95,9 @@ a {
 .AppBody {
   flex: 1;
 }
+
+.VictoryContainer {
+  /*Motivo do !important: No gráfico gerado o height está definido com 100%.*/
+  /*Por este motivo o gráfico não ficava alinhado ao centro.*/
+  height: initial !important;
+}
